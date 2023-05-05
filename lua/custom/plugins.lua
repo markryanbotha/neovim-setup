@@ -100,6 +100,7 @@ local plugins = {
       require("lazygit.utils").project_root_dir()
     end,
   },
+  { "tpope/vim-sleuth",     lazy = false },
 }
 
 return plugins

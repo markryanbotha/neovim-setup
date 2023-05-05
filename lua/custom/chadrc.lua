@@ -5,7 +5,6 @@ M.plugins = "custom.plugins"
 M.mappings = require "custom.mappings"
 
 local opt = vim.opt
-opt.shiftwidth = 2
 opt.clipboard = ""
 
 -- Keep the cursor in the center of the screen when moving up or down
