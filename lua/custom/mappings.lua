@@ -43,10 +43,22 @@ M.custom = {
       "<cmd>TroubleToggle<cr>",
       "Toggle Workspace Diagnostics",
     },
+    ["<leader>s"] = {
+      [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+      "Rename current word under cursor",
+    },
   },
   v = {
     ["<leader>y"] = { '"+y', "Copy to clipboard" },
     ["<leader>d"] = { '"+d', "Cut to clipboard" },
+    ["J"] = {
+      ":m '>+1<CR>gv=gv",
+      "Move text up",
+    },
+    ["K"] = {
+      ":m '<-2<CR>gv=gv",
+      "Move text down",
+    },
   },
 }
 

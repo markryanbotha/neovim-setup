@@ -9,6 +9,7 @@
 - Install [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 - Do [pre-requisites for NvChad](https://nvchad.com/docs/quickstart/install)
 - Run the following command to copy the configuration from Github to your local machine: `git clone https://github.com/markryanbotha/neovim-setup.git ~/.config/nvim --depth 1 && nvim`
+- Ensure Node (and nvm) is installed for Mason extensions
 - Run the following command in Neovim `:MasonInstallAll`
 
 ## Additional Manual Steps

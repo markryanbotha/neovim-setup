@@ -31,12 +31,12 @@ local sources = {
       PRETTIERD_DEFAULT_CONFIG = vim.fn.expand "~/.config/nvim/utils/linter-config/.prettierrc.json",
     },
   },
-  lint.shellcheck,
 
-  null_ls.builtins.diagnostics.eslint_d.with {
+  lint.shellcheck,
+  lint.eslint_d.with {
     diagnostics_format = "[eslint] #{m}\n(#{c})",
   },
-  null_ls.builtins.diagnostics.fish,
+  lint.fish,
 }
 
 null_ls.setup {
