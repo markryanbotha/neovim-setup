@@ -93,6 +93,13 @@ local plugins = {
     "davidosomething/format-ts-errors.nvim",
   },
   { "folke/lsp-colors.nvim" },
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = false,
+    config = function()
+      require("lazygit.utils").project_root_dir()
+    end,
+  },
 }
 
 return plugins

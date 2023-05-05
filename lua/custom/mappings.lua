@@ -1,18 +1,16 @@
 local M = {}
 
 -- In order to disable a default keymap, use
-M.disabled = {
-  n = {
-    ["<leader>h"] = "",
-    ["<C-a>"] = "",
-  },
-}
+M.disabled = {}
 
 -- Your custom mappings
 M.custom = {
   n = {
     ["<leader>y"] = { '"+y', "Copy to clipboard" },
     ["<leader>d"] = { '"+d', "Cut to clipboard" },
+
+    --lazygit
+    ["<leader>gl"] = { "<cmd>LazyGit<cr>", "Open Lazy Git floating window" },
 
     -- jest and debugging
     ["<leader>jr"] = {
@@ -39,6 +37,13 @@ M.custom = {
       end,
       "Continue debugging",
     },
+    ["<leader>jh"] = {
+      function()
+        require("dapui").eval()
+      end,
+      "Hover and evaulate element",
+    },
+
     ["<leader>tt"] = {
       "<cmd>TroubleToggle<cr>",
       "Toggle Workspace Diagnostics",

@@ -16,6 +16,7 @@
 
 - In order to use the Node debugger, we will need to setup the [Node2 debugger](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#node-debug2).
   - This will allow us to use [nvim-dap](https://github.com/mfussenegger/nvim-dap) to debug TypeScript/Javascript code. This can be used alongside the [jester](https://github.com/David-Kunz/jester) plugin to run and debug Jest tests.
+- Install Lazygit (`brew install lazygit`)
 
 ## Extending the setup
 
