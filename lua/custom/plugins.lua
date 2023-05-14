@@ -1,6 +1,9 @@
 local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "JoosepAlviste/nvim-ts-context-commentstring",
+    },
     opts = {
       ensure_installed = {
         -- defaults
@@ -17,6 +20,7 @@ local plugins = {
         "prisma",
         "astro",
         "yaml",
+        "tsx",
         -- "vue", "svelte",
         --
 
@@ -24,6 +28,9 @@ local plugins = {
         "c",
         "zig",
       },
+    },
+    context_commentstring = {
+      enable = true,
     },
   },
   {
@@ -64,6 +71,19 @@ local plugins = {
     "MunifTanjim/eslint.nvim",
     config = function()
       require "custom.configs.eslint"
+    end,
+  },
+  {
+    "numToStr/Comment.nvim",
+    -- keys = { "gc", "gb" },
+    init = function()
+      require("core.utils").load_mappings "comment"
+    end,
+    config = function()
+      -- Adding custom config to get comments working in tsx with ts_context_commentstring
+      require("Comment").setup {
+        pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+      }
     end,
   },
   {
