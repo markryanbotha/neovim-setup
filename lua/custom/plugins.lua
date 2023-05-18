@@ -23,6 +23,8 @@ local plugins = {
         "tsx",
         -- "vue", "svelte",
         --
+        -- others
+        "sql",
 
         -- low level
         "c",
