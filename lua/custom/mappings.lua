@@ -52,6 +52,10 @@ M.custom = {
       [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
       "Rename current word under cursor",
     },
+    ["<leader>cr"] = {
+      "<cmd>Telescope lsp_references<cr>",
+      "Get usage of hovered variable with Telescope",
+    },
   },
   v = {
     ["<leader>y"] = { '"+y', "Copy to clipboard" },
