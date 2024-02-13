@@ -265,6 +265,20 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
+  {
+    "michaelb/sniprun",
+    branch = "dev",
+    cmd = { "SnipRun" },
+    build = "sh install.sh",
+    -- do 'sh install.sh 1' if you want to force compile locally
+    -- (instead of fetching a binary from the github release). Requires Rust >= 1.65
+
+    config = function()
+      require("sniprun").setup {
+        -- your options
+      }
+    end,
+  },
 }
 
 local config = require("core.utils").load_config()

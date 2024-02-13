@@ -33,9 +33,6 @@ local sources = {
   },
 
   lint.shellcheck,
-  lint.eslint_d.with {
-    diagnostics_format = "[eslint] #{m}\n(#{c})",
-  },
   lint.fish,
 }
 

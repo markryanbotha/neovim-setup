@@ -60,7 +60,7 @@ local plugins = {
         "prettierd",
         "stylua",
         "typescript-language-server",
-        "eslint_d",
+        "eslint-lsp",
         "tailwindcss-language-server",
         "css-lsp",
         "prisma-language-server",
@@ -68,12 +68,6 @@ local plugins = {
         "yaml-language-server",
       },
     },
-  },
-  {
-    "MunifTanjim/eslint.nvim",
-    config = function()
-      require "custom.configs.eslint"
-    end,
   },
   {
     "numToStr/Comment.nvim",
