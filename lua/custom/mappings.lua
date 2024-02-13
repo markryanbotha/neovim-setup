@@ -56,6 +56,14 @@ M.custom = {
       "<cmd>Telescope lsp_references<cr>",
       "Get usage of hovered variable with Telescope",
     },
+    ["<leader>fm"] = {
+      function()
+        vim.lsp.buf.format { async = true }
+      end,
+      "LSP formatting",
+    },
+    -- Run File
+    ["<leader>R"] = { "<cmd> %SnipRun <CR>", "run current file" },
   },
   v = {
     ["<leader>y"] = { '"+y', "Copy to clipboard" },
@@ -68,6 +76,8 @@ M.custom = {
       ":m '<-2<CR>gv=gv",
       "Move text down",
     },
+    -- Run  selection
+    ["<leader>R"] = { "<cmd> '<,'>SnipRun <CR>", "run selection" },
   },
 }
 
