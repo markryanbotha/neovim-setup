@@ -43,6 +43,12 @@ M.custom = {
       end,
       "Hover and evaulate element",
     },
+    ["<leader>jx"] = {
+      function()
+        require("dapui").close()
+      end,
+      "Exit debug",
+    },
 
     ["<leader>tt"] = {
       "<cmd>TroubleToggle<cr>",
