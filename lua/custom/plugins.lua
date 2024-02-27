@@ -104,6 +104,7 @@ local plugins = {
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
+    lazy = false,
   },
   {
     "davidosomething/format-ts-errors.nvim",
@@ -118,12 +119,12 @@ local plugins = {
   },
   { "tpope/vim-sleuth",     lazy = false },
   { "rcarriga/cmp-dap" },
-  {
-    "hrsh7th/nvim-cmp",
-    config = function()
-      require "custom.configs.cmp"
-    end,
-  },
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   config = function()
+  --     require "custom.configs.cmp"
+  --   end,
+  -- },
 }
 
 return plugins
