@@ -25,6 +25,7 @@ local plugins = {
         --
         -- others
         "sql",
+        "java",
 
         -- low level
         "c",
@@ -119,12 +120,12 @@ local plugins = {
   },
   { "tpope/vim-sleuth",     lazy = false },
   { "rcarriga/cmp-dap" },
-  -- {
-  --   "hrsh7th/nvim-cmp",
-  --   config = function()
-  --     require "custom.configs.cmp"
-  --   end,
-  -- },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      require "custom.configs.cmp"
+    end,
+  },
 }
 
 return plugins
