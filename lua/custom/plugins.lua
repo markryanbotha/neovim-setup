@@ -126,6 +126,11 @@ local plugins = {
       require "custom.configs.cmp"
     end,
   },
+  {
+    "neoclide/coc.nvim",
+    lazy = false,
+    branch = "release",
+  },
 }
 
 return plugins
